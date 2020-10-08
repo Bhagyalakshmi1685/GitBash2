@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test thread-count="5" name="firefoxTest(failed)" parallel="tests">
+    <parameter name="nodeurl" value="http://localhost:4444/wd/hub/"/>
+    <parameter name="browser" value="firefox"/>
+    <parameter name="appurl" value="https://demo.actitime.com"/>
+    <classes>
+      <class name="Com_OrangeHRM_Test.ValidLoginLogoutTest">
+        <methods>
+          <include name="preCondition"/>
+          <include name="validLoginLogout"/>
+          <include name="postCondition"/>
+        </methods>
+      </class> <!-- Com_OrangeHRM_Test.ValidLoginLogoutTest -->
+      <class name="Com_OrangeHRM_Test.VerifyVersionTest">
+        <methods>
+          <include name="verifyVersion"/>
+          <include name="preCondition"/>
+          <include name="postCondition"/>
+        </methods>
+      </class> <!-- Com_OrangeHRM_Test.VerifyVersionTest -->
+      <class name="Com_OrangeHRM_Test.InvalidLoginTest">
+        <methods>
+          <include name="preCondition"/>
+          <include name="postCondition"/>
+          <include name="invalidLogin"/>
+        </methods>
+      </class> <!-- Com_OrangeHRM_Test.InvalidLoginTest -->
+    </classes>
+  </test> <!-- firefoxTest(failed) -->
+  <test thread-count="5" name="IETest(failed)" parallel="tests">
+    <parameter name="nodeurl" value="http://localhost:4444/wd/hub/"/>
+    <parameter name="browser" value="internet explorer"/>
+    <parameter name="appurl" value="https://demo.actitime.com"/>
+    <classes>
+      <class name="Com_OrangeHRM_Test.ValidLoginLogoutTest">
+        <methods>
+          <include name="preCondition"/>
+          <include name="validLoginLogout"/>
+          <include name="postCondition"/>
+        </methods>
+      </class> <!-- Com_OrangeHRM_Test.ValidLoginLogoutTest -->
+    </classes>
+  </test> <!-- IETest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
